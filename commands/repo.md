@@ -88,18 +88,27 @@ git commit -m "Initial commit"
 
 ## Step 5: Publish to GitHub
 
+**First, ask about repository visibility:**
+Use AskUserQuestion to ask: "Should this repository be private or public?"
+
+Provide these options:
+1. **Private** - Only you (and collaborators you add) can see this repository
+2. **Public** - Anyone on the internet can see this repository
+
+Use `--private` or `--public` flag based on the user's choice.
+
 **For PERSONAL repos (default):**
 Get the user's GitHub username and create the repo:
 ```bash
 gh auth status 2>&1 | grep "Logged in to github.com account"
-gh repo create <GITHUB_USERNAME>/<REPO_NAME> --private --source=. --remote=origin --push
+gh repo create <GITHUB_USERNAME>/<REPO_NAME> --<VISIBILITY> --source=. --remote=origin --push
 ```
 
 **For WORK repos:**
 Use AskUserQuestion to ask: "What GitHub organization should this work repo be published to?"
 Then create with that org:
 ```bash
-gh repo create <ORG_NAME>/<REPO_NAME> --private --source=. --remote=origin --push
+gh repo create <ORG_NAME>/<REPO_NAME> --<VISIBILITY> --source=. --remote=origin --push
 ```
 
 ## Step 6: Virtual Environment Setup
