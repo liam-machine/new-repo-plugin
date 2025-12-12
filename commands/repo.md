@@ -92,7 +92,7 @@ git commit -m "Initial commit"
 Get the user's GitHub username and create the repo:
 ```bash
 gh auth status 2>&1 | grep "Logged in to github.com account"
-gh repo create <GITHUB_USERNAME>/<REPO_NAME> --public --source=. --remote=origin --push
+gh repo create <GITHUB_USERNAME>/<REPO_NAME> --private --source=. --remote=origin --push
 ```
 
 **For WORK repos:**
