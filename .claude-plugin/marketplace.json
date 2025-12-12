@@ -1,0 +1,15 @@
+{
+  "name": "liam-machine-plugins",
+  "description": "Claude Code plugins by liam-machine",
+  "owner": {
+    "name": "liam-machine",
+    "url": "https://github.com/liam-machine"
+  },
+  "plugins": [
+    {
+      "name": "repo-creator",
+      "source": "..",
+      "description": "Quickly create and publish repos with the /repo command"
+    }
+  ]
+}
