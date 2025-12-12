@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "repo-creator",
-      "source": "..",
+      "source": "./",
       "description": "Quickly create and publish repos with the /repo command"
     }
   ]
