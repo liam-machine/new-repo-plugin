@@ -119,15 +119,15 @@ Based on the user's choice:
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-Tell the user to activate with: `source .venv/bin/activate`
+The virtual environment is now activated for this session.
 
 **For conda:**
 Ask for Python version preference, then:
 ```bash
 conda create -p ./conda-env python=<VERSION> -y
-conda activate ./conda-env
+source $(conda info --base)/etc/profile.d/conda.sh && conda activate ./conda-env
 ```
-Tell the user to activate with: `conda activate ./conda-env`
+The conda environment is now activated for this session.
 
 **For npm:**
 ```bash
@@ -138,18 +138,28 @@ This creates a package.json for Node.js projects.
 **For Skip:**
 No action needed.
 
-## Step 7: Set Working Directory
+## Step 7: Set Working Directory and Confirm Activation
 
-After everything is complete, change to the new repository directory:
+After everything is complete, ensure you are in the new repository directory with the virtual environment activated:
+
 ```bash
 cd <REPO_PATH>/<REPO_NAME>
 ```
 
+If a virtual environment was created, re-activate it to ensure it's active:
+- **For venv:** `source .venv/bin/activate`
+- **For conda:** `source $(conda info --base)/etc/profile.d/conda.sh && conda activate ./conda-env`
+
+Verify the environment is activated by checking the Python/Node path if applicable.
+
 Confirm to the user:
 - Repository created at: `<REPO_PATH>/<REPO_NAME>`
 - GitHub URL: `https://github.com/<USERNAME_OR_ORG>/<REPO_NAME>`
-- Virtual environment: <status>
+- Virtual environment: <status> (activated for this session)
 - Current working directory is now the new repository
+- For future terminal sessions, activate with:
+  - venv: `source .venv/bin/activate`
+  - conda: `conda activate ./conda-env`
 
 ## Error Handling
 
