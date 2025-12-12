@@ -99,7 +99,7 @@ gh repo create <GITHUB_USERNAME>/<REPO_NAME> --private --source=. --remote=origi
 Use AskUserQuestion to ask: "What GitHub organization should this work repo be published to?"
 Then create with that org:
 ```bash
-gh repo create <ORG_NAME>/<REPO_NAME> --public --source=. --remote=origin --push
+gh repo create <ORG_NAME>/<REPO_NAME> --private --source=. --remote=origin --push
 ```
 
 ## Step 6: Virtual Environment Setup
