@@ -1,0 +1,12 @@
+{
+  "name": "repo-creator",
+  "version": "1.0.0",
+  "description": "Quickly create and publish repos with the /repo command. Supports personal and work repositories, GitHub publishing, and virtual environment setup (venv, conda, npm).",
+  "author": {
+    "name": "liam-machine",
+    "url": "https://github.com/liam-machine"
+  },
+  "repository": "https://github.com/liam-machine/new-repo-plugin",
+  "license": "MIT",
+  "keywords": ["repo", "git", "github", "venv", "conda", "npm", "productivity", "automation"]
+}
